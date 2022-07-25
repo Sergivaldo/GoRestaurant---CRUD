@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="assets/logo.svg" alt="">
+            <div>
+                <button id="btt_novo">
+                    <span>Novo Prato</span>
+                    <i class="fa-regular fa-square-plus"></i>
+                </button>
+                <button onclick="clearLocalStorage()">Limpar Tudo</button>
+            </div>
+            
+        </div>
+        
+    </header>
+    <main>
+    </main>
+
+    <div id="modal">
+        <div id="content-modal">
+            <div>
+                <h3>Novo Prato</h3>
+                <button ><i id="close_btt" class="fa-solid fa-xmark"></i></button>
+                
+            </div>
+            
+            <form autocomplete="off" id="modal-form">
+                <input type="text" class="modal-input" id="link_imagem" name="link_imagem" placeholder="Link da imagem do prato (opcional)">
+                <input type="text" class="modal-input" name="nome" id="nome" placeholder="Nome do prato" data-index="novo" required>
+                <input type="text" class="modal-input" id="preco" name="preco" placeholder="Preço do prato" required>
+                <input type="text" class="modal-input" id="descricao" name="descricao" placeholder="Descrição do prato"required>
+                <button id="btt_add" onclick="adicionar_prato()" type="button">
+                    Adicionar prato 
+                    <i class="fa-solid fa-check"></i>
+                </button>
+            </form>         
+        </div>
+    </div>
+</body>
+</html>

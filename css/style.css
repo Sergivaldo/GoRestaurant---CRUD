@@ -1,0 +1,234 @@
+div#modal {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+div#modal div#content-modal {
+  padding: 30px;
+  width: 400px;
+  height: 400px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+div#modal div#content-modal div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+div#modal div#content-modal div h3 {
+  text-align: left;
+  color: #494949;
+}
+div#modal div#content-modal div button {
+  background-color: transparent;
+  cursor: pointer;
+}
+div#modal div#content-modal div button i {
+  padding: 5px;
+  font-size: 1.6rem;
+  color: #494949;
+}
+div#modal div#content-modal form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-between;
+}
+div#modal div#content-modal form input {
+  margin-bottom: 15px;
+  padding: 15px 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.08);
+  outline-color: #8b8b8b;
+}
+div#modal div#content-modal form button {
+  padding: 10px 20px;
+  align-self: flex-end;
+  border-radius: 5px;
+  color: #FFFFFF;
+  background-color: #42A934;
+  cursor: pointer;
+  outline-color: #409630;
+}
+div#modal div#content-modal form button i {
+  margin-left: 10px;
+}
+
+div#modal.active {
+  visibility: visible;
+}
+
+@media (max-width: 450px) {
+  div#modal div#content-modal {
+    width: 300px;
+  }
+}
+.card-food {
+  width: 250px;
+  font-family: "Sora", sans-serif;
+}
+.card-food .card-food__img {
+  height: 100px;
+  background-color: #F2AE5A;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.card-food .card-food__info {
+  padding: 25px;
+  background-color: #eeeeee;
+  height: 140px;
+  color: #494949;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.card-food .card-food__info strong {
+  font-size: 1.2rem;
+}
+.card-food .card-food__info p {
+  font-size: 0.9rem;
+}
+.card-food .card-food__info span {
+  color: #409630;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.card-food .card-food__edit {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 30px;
+  background-color: #e0e0e0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.card-food .card-food__edit div:nth-child(1) button {
+  padding: 10px;
+  background-color: #f5f4f4;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #494949;
+}
+.card-food .card-food__edit div:nth-child(1) button:nth-child(1) {
+  margin-right: 10px;
+}
+
+.card-food:nth-child(n+1):nth-child(-n+3) {
+  margin-top: -15vh;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f4f4;
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  height: 40vh;
+  background-color: #C64235;
+}
+header > div {
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+}
+header > div img {
+  max-width: 230px;
+}
+header > div div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+header > div div button {
+  background-color: #409630;
+  color: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+}
+header > div div button:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+header > div div button:nth-child(1) span {
+  padding: 10px;
+  font-size: 0.8rem;
+  font-family: "Sora", sans-serif;
+}
+header > div div button:nth-child(1) i {
+  padding: 10px;
+  background-color: #42A934;
+  font-size: 1rem;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+header > div div button:nth-child(2) {
+  padding: 10px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 20px;
+}
+
+@media (max-width: 450px) {
+  header div {
+    justify-content: center;
+    gap: 30px;
+  }
+  main {
+    grid-template-columns: 250px;
+    column-gap: 0px;
+  }
+  main .card-food .card-food__info {
+    align-items: center;
+  }
+  main .card-food .card-food__edit {
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 30px;
+  }
+  main .card-food:nth-child(n+2):nth-child(-n+3) {
+    margin-top: 0px;
+  }
+}/*# sourceMappingURL=style.css.map */

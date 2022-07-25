@@ -1,0 +1,36 @@
+@import 'variables';
+
+@mixin reset-css {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+@mixin flex($direction:row,$main-align:space-between,$cross-align:center,$wrap:wrap) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+
+    @if $direction == row {
+        justify-content: $main-align;
+        align-items: $cross-align;
+    }
+    @else{
+        justify-content: $cross-align;
+        align-items: $main-align;
+    }
+}
+
+@mixin font($size,$weight,$family,$type,$color:inheit) {
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $family, $type;
+    color: $color;
+}
+
+@mixin text-effects($align,$transform:lowercase){
+    text-align:$align;
+    text-transform:$transform;
+}
+

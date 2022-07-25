@@ -1,0 +1,70 @@
+@import 'mixins';
+@import 'variables';
+
+
+.card-food{
+    width: 250px;
+    font-family: 'Sora',sans-serif;
+    .card-food__img{
+        height: 100px;
+        background-color: $oragen;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        
+    }
+
+    .card-food__info{
+        padding: 25px;
+        background-color: $gray-light;
+        height: 140px;
+        color: $gray-600;
+
+        @include flex(column,flex-start,space-between);
+        strong{
+            font-size: 1.2rem;
+        }
+
+        p{
+            font-size: 0.90rem;
+        }
+
+        span{
+            color: $green;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+    }
+
+    .card-food__edit{
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px 30px;
+        background-color: $gray;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        div:nth-child(1){
+            button{
+                padding: 10px;
+                background-color: $white-smoke;
+                border-radius: 5px;
+                cursor: pointer;
+                color: $gray-600;
+            }
+            button:nth-child(1){
+                margin-right:10px;
+            }
+        }
+    }
+}
+
+.card-food:nth-child(n+1):nth-child(-n+3){
+    margin-top: -15vh;
+}
+
+
+
+

@@ -1,0 +1,106 @@
+@import 'modal';
+@import 'mixins';
+@import 'card_food';
+
+
+*{
+    @include reset-css;
+}
+
+body{
+    background-color: $white-smoke;
+    font-family: 'Inter',sans-serif;
+}
+
+header{
+    
+    padding-top: 20px;
+    padding-bottom: 30px;
+    height: 40vh;
+    background-color: $red;
+    & > div{
+        margin: 0 auto;
+        padding: 0 15px;
+        @include flex();
+        max-width: 1100px;
+        img{
+            max-width: 230px;
+        }
+        div{
+            @include flex();
+            gap: 15px;
+            button{
+                background-color: $green;
+                color: $white;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            button:nth-child(1){
+                @include flex(row,center);
+               
+                span{
+                    padding: 10px;
+                    font-size: 0.8rem;
+                    font-family: 'Sora',sans-serif;
+                    
+                }
+    
+                i{
+                    padding: 10px;
+                    background-color: $green-light;
+                    font-size: 1rem;
+                    border-bottom-right-radius: 5px;
+                    border-top-right-radius: 5px;
+                }
+            }
+
+            button:nth-child(2){
+                padding: 10px;
+            }
+        }
+        
+    }
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 20px;
+}
+
+@media(max-width:450px){
+    header{
+        div{
+            justify-content: center;
+            gap: 30px;
+        }
+    }
+
+    main{
+        grid-template-columns: 250px;
+        column-gap: 0px;
+
+        .card-food{
+
+            .card-food__info{
+                align-items: center;
+            }
+
+            .card-food__edit{
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                padding: 10px 30px;
+            }
+        }
+        .card-food:nth-child(n+2):nth-child(-n+3){
+            margin-top: 0px;
+        }
+
+    }
+    
+    
+    
+}
