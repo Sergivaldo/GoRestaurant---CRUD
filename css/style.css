@@ -77,11 +77,11 @@ div#modal.active {
   }
 }
 .card-food {
-  width: 250px;
+  width: 280px;
   font-family: "Sora", sans-serif;
 }
 .card-food .card-food__img {
-  height: 100px;
+  height: 150px;
   background-color: #F2AE5A;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -210,7 +210,7 @@ main {
   row-gap: 20px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   header div {
     justify-content: center;
     gap: 30px;
@@ -218,6 +218,12 @@ main {
   main {
     grid-template-columns: 250px;
     column-gap: 0px;
+  }
+  main .card-food {
+    width: 250px;
+  }
+  main .card-food .card-food__img {
+    height: 100px;
   }
   main .card-food .card-food__info {
     align-items: center;

@@ -70,7 +70,7 @@ main{
     row-gap: 20px;
 }
 
-@media(max-width:450px){
+@media(max-width:600px){
     header{
         div{
             justify-content: center;
@@ -83,6 +83,11 @@ main{
         column-gap: 0px;
 
         .card-food{
+            width: 250px;
+
+            .card-food__img{
+                height: 100px;
+            }
 
             .card-food__info{
                 align-items: center;
